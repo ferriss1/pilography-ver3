@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Photography Booking</h1>
+    </header>
+
+    <section>
+        <form action="connect.php" method="post" id="bookingForm" >
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required name="firstname">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required name="emailname">
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required name="phoneno">
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required name="daten">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required name="timen">
+
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="portrait">Portrait Photography</option>
+                <option value="wedding">Wedding Photography</option>
+                <option value="event">Landscape Photography</option>
+                <option value="event">Parties Photography</option>
+                <option value="event">Corporate Photography</option>
+                <option value="event">Children Photography</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <script >
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Booking Successful!'); // You can replace this with your booking logic
+        });
+        
+    </script>
+
+</body>
+</html>
